@@ -1,0 +1,29 @@
+{
+  "name": "grunt-pagespeed",
+  "description": "Grunt plugin for running pagespeed.",
+  "homepage": "https://github.com/jrcryer/grunt-pagespeed",
+  "author": {
+    "name": "James Cryer",
+    "email": "chat@jamescryer.com",
+    "url": "http://www.jamescryer.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jrcryer/grunt-pagespeed.git"
+  },
+  "contributors": [],
+  "version": "0.0.1",
+  "main": "Gruntfile.coffee",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin",
+    "phantomjs",
+    "pagespeed"
+  ]
+}
+
