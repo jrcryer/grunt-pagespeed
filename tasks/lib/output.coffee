@@ -12,44 +12,91 @@ exports.init = (grunt) ->
 
   score     = 0
   threshold = 70
-  keyLength = 30
   exports   = {}
 
+  #
+  # Generate score output
+  #
   generateScore = (response) ->
-    div     = Array(keyLength * 2).join "-"
-    output  = "#{div}\nURL:   #{response.id} \nScore: #{score}\n#{div}"
+    output  = "URL:   #{response.id} \nScore: #{score}"
     print output
 
+  #
+  # Generate ruleset output
+  #
   generateRuleSetResults = (rulesets) ->
-    ""
 
+    for title, result of rulesets
+      title  = firstToUpperCaseAndAddSpace(title)
+      title += bufferSpace(title)
+      print "#{title}| #{result.ruleScore}"
+
+  #
+  # Generate statistics output
+  #
   generateStatistics = (statistics) ->
 
     for title, result of statistics
-       title  = title.charAt(0).toUpperCase() + (title.replace(/([A-Z]+)/g, " $1").replace(/([A-Z][a-z])/g, " $1")).slice(1)
+       title  = firstToUpperCaseAndAddSpace(title)
        title += bufferSpace(title)
+       print "#{title}| #{result}"
 
-       print "#{title}: #{result}"
-
+  #
+  # Prints result based on whether the current score
+  # has passed the threshold
+  #
   print = (msg) ->
     grunt.log.ok(msg) if score >= threshold
     grunt.log.error(msg) if score < threshold
 
-  bufferSpace = (msg) ->
+  #
+  # Adds buffer space to string
+  #
+  bufferSpace = (msg, length = 50) ->
     buffer = ""
-    buffer = Array(keyLength - msg.length).join(" ") if keyLength - msg.length  > 0
+    buffer = Array(length - msg.length).join(" ") if length - msg.length  > 0
     buffer
 
+  #
+  # Adds spaces to camel case and uppercases first word
+  #
+  firstToUpperCaseAndAddSpace = (msg) ->
+    msg.charAt(0).toUpperCase() + addSpacesToWords(msg.slice(1))
+
+  #
+  # Adds spaces to words
+  #
+  addSpacesToWords = (msg) ->
+    (msg.replace(/([A-Z]+)/g, " $1").replace(/([A-Z][a-z])/g, " $1"))
+
+  #
+  # Prints a divider
+  #
+  divder = (length = 65)->
+    print ""
+    print(Array(length).join "-")
+    print ""
+
+  #
+  # Setter for threshold
+  #
   exports.threshold = (limit) ->
     threshold = limit
 
+  #
+  # Processes and outputs results
+  #
   exports.process = (response) ->
     grunt.verbose.writeln 'Pagespeed Insights: Processing results'
 
     score = response.score
+    divder()
     generateScore(response)
+    divder()
     generateStatistics(response.pageStats)
+    divder()
     generateRuleSetResults(response.formattedResults.ruleResults)
+    divder()
 
     grunt.fatal "Threshold of #{threshold} not met with score of #{response.score}" if response.score < threshold
 
