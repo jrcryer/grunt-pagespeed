@@ -12,12 +12,12 @@ module.exports = (grunt) ->
   grunt.initConfig
     pagespeed:
       options:
-        key: "AIzaSyA9Y3D2HZI3aaqthB8z6veXczJoNlELJS4"
+        key: "API_KEY"
       prod:
         url: "https://developers.google.com/speed/docs/insights/v1/getting_started"
         locale: "en_GB"
         strategy: "desktop"
-        threshold: 80
+        threshold: 10
 
   grunt.loadTasks 'tasks'
 
