@@ -12,13 +12,15 @@
     "url": "git://github.com/jrcryer/grunt-pagespeed.git"
   },
   "contributors": [],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "Gruntfile.coffee",
   "engines": {
     "node": ">=0.8.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "~0.4.1"
+  },
+  "dependencies": {
     "googleapis": "~0.2.13-alpha"
   },
   "keywords": [
