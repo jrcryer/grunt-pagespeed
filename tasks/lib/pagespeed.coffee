@@ -19,13 +19,13 @@ exports.init = (grunt) ->
     googleapis.discover("pagespeedonline", "v1").execute (err, client) ->
       grunt.fatal(err) if err
       grunt.verbose.writeln 'Pagespeed Insights: API Discovered'
-      grunt.verbose.writeln 'Pagespeed Insights: Sending request #{params}'
+      grunt.verbose.writeln 'Pagespeed Insights: Sending request'
 
       request = client.pagespeedonline.pagespeedapi.runpagespeed(params)
 
       request.execute (err, response) ->
         grunt.verbose.writeln 'Pagespeed Insights: Request completed'
         grunt.fatal(err) if err
-        responseHandler()
+        responseHandler(response)
 
   return exports
