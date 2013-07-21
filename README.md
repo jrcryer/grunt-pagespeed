@@ -1,6 +1,7 @@
 # grunt-pagespeed
 
-> Grunt plugin for running Google pagespeed.
+> Grunt plugin for running [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/)
+
 
 _This plugin is developed for Grunt `0.4.1` and is not tested for backward compatibility with Grunt `0.3.x`._
 
