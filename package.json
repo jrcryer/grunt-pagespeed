@@ -1,6 +1,6 @@
 {
   "name": "grunt-pagespeed",
-  "description": "Grunt plugin for running pagespeed.",
+  "description": "Grunt plugin for running Google PageSpeed Insights.",
   "homepage": "https://github.com/jrcryer/grunt-pagespeed",
   "author": {
     "name": "James Cryer",
@@ -12,7 +12,7 @@
     "url": "git://github.com/jrcryer/grunt-pagespeed.git"
   },
   "contributors": [],
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "Gruntfile.coffee",
   "engines": {
     "node": ">=0.8.0"
