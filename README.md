@@ -11,9 +11,7 @@ _This plugin is developed for Grunt `0.4.1` and is not tested for backward compa
     npm install grunt-pagespeed --save-dev
     ```
 
-
-2. [Install Phantomjs](http://phantomjs.org/)
-3. Add this to your project's `Gruntfile.js` gruntfile:
+2. Add this to your project's `Gruntfile.js` gruntfile:
 
     ```js
     grunt.loadNpmTasks('grunt-pagespeed');
