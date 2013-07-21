@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Grunt-pagespeed by jrcryer</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Grunt-pagespeed</h1>
+          <h2>Grunt plugin to run pagespeed as part of CI</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/jrcryer/grunt-pagespeed/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/jrcryer/grunt-pagespeed/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/jrcryer/grunt-pagespeed" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a name="grunt-pagespeed" class="anchor" href="#grunt-pagespeed"><span class="octicon octicon-link"></span></a>grunt-pagespeed</h1>
+
+<blockquote>
+<p>Grunt plugin for running Google pagespeed.</p>
+</blockquote>
+
+<p><em>This plugin is developed for Grunt <code>0.4.1</code> and is not tested for backward compatibility with Grunt <code>0.3.x</code>.</em></p>
+
+<h2>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<ol>
+<li>
+<p>Install this grunt plugin with the following command:</p>
+
+<pre lang="shell"><code>npm install grunt-pagespeed --save-dev
+</code></pre>
+</li>
+<li>
+<p>Add this to your project's <code>Gruntfile.js</code> gruntfile:</p>
+
+<div class="highlight"><pre><span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">'grunt-pagespeed'</span><span class="p">);</span>
+</pre></div>
+</li>
+</ol><h2>
+<a name="pagespeed-task" class="anchor" href="#pagespeed-task"><span class="octicon octicon-link"></span></a>Pagespeed task</h2>
+
+<p><em>Run this task with the <code>grunt pagespeed</code> command.</em></p>
+
+<p><em>This task is a <a href="https://github.com/gruntjs/grunt/wiki/Configuring-tasks">multi task</a> so any targets, files and options should be specified according to the <a href="https://github.com/gruntjs/grunt/wiki/Configuring-tasks">multi task</a> documentation.</em></p>
+
+<h3>
+<a name="usage-example" class="anchor" href="#usage-example"><span class="octicon octicon-link"></span></a>Usage Example</h3>
+
+<div class="highlight"><pre><span class="nx">pagespeed</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">prod</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">url</span><span class="o">:</span> <span class="s2">"https://developers.google.com/speed/docs/insights/v1/getting_started"</span>
+        <span class="nx">locale</span><span class="o">:</span> <span class="s2">"en_GB"</span>
+        <span class="nx">strategy</span><span class="o">:</span> <span class="s2">"desktop"</span>
+        <span class="nx">threshold</span><span class="o">:</span> <span class="mi">80</span>
+    <span class="p">},</span>
+    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">key</span><span class="o">:</span> <span class="s2">"API_KEY"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3>
+<a name="target-properties" class="anchor" href="#target-properties"><span class="octicon octicon-link"></span></a>Target Properties</h3>
+
+<h4>
+<a name="url" class="anchor" href="#url"><span class="octicon octicon-link"></span></a>url</h4>
+
+<p>Type: <code>String</code></p>
+
+<p>The URL of the page for which the PageSpeed Insights API should generate results.</p>
+
+<h3>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
+
+<h4>
+<a name="locale" class="anchor" href="#locale"><span class="octicon octicon-link"></span></a>locale</h4>
+
+<p>Type: <code>String</code></p>
+
+<p>The locale that results should be generated in.</p>
+
+<h4>
+<a name="strategy" class="anchor" href="#strategy"><span class="octicon octicon-link"></span></a>strategy</h4>
+
+<p>Type: <code>String</code></p>
+
+<p>The strategy to use when analyzing the page. Valid values are desktop and mobile.</p>
+
+<h4>
+<a name="threshold" class="anchor" href="#threshold"><span class="octicon octicon-link"></span></a>threshold</h4>
+
+<p>Type: <code>String</code></p>
+
+<p>Threshold score that is needed to pass the pagespeed test</p>
+        </section>
+
+        <footer>
+          Grunt-pagespeed is maintained by <a href="https://github.com/jrcryer">jrcryer</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
