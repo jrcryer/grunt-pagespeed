@@ -17,6 +17,7 @@ module.exports = (grunt) ->
         url: "https://developers.google.com/speed/docs/insights/v1/getting_started"
         locale: "en_GB"
         strategy: "desktop"
+        threshold: 80
 
   grunt.loadTasks 'tasks'
 

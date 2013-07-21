@@ -20,6 +20,7 @@ exports.init = (grunt) ->
       grunt.fatal(err) if err
       grunt.verbose.writeln 'Pagespeed Insights: API Discovered'
       grunt.verbose.writeln 'Pagespeed Insights: Sending request'
+      grunt.verbose.writeflags(params, "Params:")
 
       request = client.pagespeedonline.pagespeedapi.runpagespeed(params)
 

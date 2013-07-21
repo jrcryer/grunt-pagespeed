@@ -20,4 +20,6 @@ module.exports = (grunt) ->
     this.async()
 
     params = config.params this.options(this.data)
+    output.threshold(config.threshold()) if config.threshold()
+
     pagespeed.run(params, output.process)

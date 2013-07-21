@@ -12,6 +12,7 @@ exports.init = (grunt) ->
 
   exports   = {}
   config    = {}
+  DEFAULT_THRESHOLD = 70
 
   key = ->
     grunt.fatal("API key is mandatory") unless config["key"]
@@ -35,5 +36,9 @@ exports.init = (grunt) ->
     params["locale"] = locale() if locale()
     params["strategy"] = strategy() if strategy()
     params
+
+  exports.threshold = ->
+    return DEFAULT_THRESHOLD unless config["threshold"]
+    config["threshold"]
 
   return exports
