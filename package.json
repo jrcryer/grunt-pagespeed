@@ -18,7 +18,8 @@
     "node": ">=0.8.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.1",
+    "googleapis": "~0.2.13-alpha"
   },
   "keywords": [
     "gruntplugin",
@@ -26,4 +27,3 @@
     "pagespeed"
   ]
 }
-
