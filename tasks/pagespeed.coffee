@@ -19,4 +19,5 @@ module.exports = (grunt) ->
     grunt.verbose.writeln 'Running Pagespeed Insights'
     this.async()
 
-    pagespeed.run(config.params(this.options(this.data)), output.process)
+    params = config.params this.options(this.data)
+    pagespeed.run(params, output.process)
