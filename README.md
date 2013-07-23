@@ -63,7 +63,7 @@ Type: `String`
 The strategy to use when analyzing the page. Valid values are desktop and mobile.
 
 ####threshold
-Type: `String`
+Type: `Number`
 
 Threshold score that is needed to pass the pagespeed test
 
