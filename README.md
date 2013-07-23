@@ -17,12 +17,12 @@ _This plugin is developed for Grunt `0.4.1` and is not tested for backward compa
     ```js
     grunt.loadNpmTasks('grunt-pagespeed');
     ```
-    
+
 3. Obtain Google API Key from:
 
-   
+
    [https://developers.google.com/speed/docs/insights/v1/getting_started#auth](https://developers.google.com/speed/docs/insights/v1/getting_started#auth)
-   
+
 
 
 ##Pagespeed task
@@ -76,3 +76,7 @@ Threshold score that is needed to pass the pagespeed test
 Type: `String`
 
 [Google API Key](https://code.google.com/apis/console/)
+
+##License
+
+MIT
