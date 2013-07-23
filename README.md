@@ -52,7 +52,6 @@ Type: `String`
 
 The URL of the page for which the PageSpeed Insights API should generate results.
 
-###Options
 ####locale
 Type: `String`
 
@@ -67,3 +66,10 @@ The strategy to use when analyzing the page. Valid values are desktop and mobile
 Type: `String`
 
 Threshold score that is needed to pass the pagespeed test
+
+###Options
+
+####key
+Type: `String`
+
+[Google API Key](https://code.google.com/apis/console/)
