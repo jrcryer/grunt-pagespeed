@@ -1,6 +1,7 @@
 # grunt-pagespeed
 
-> Grunt plugin for running Google pagespeed.
+> Grunt plugin for running [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/)
+
 
 _This plugin is developed for Grunt `0.4.1` and is not tested for backward compatibility with Grunt `0.3.x`._
 
@@ -16,6 +17,12 @@ _This plugin is developed for Grunt `0.4.1` and is not tested for backward compa
     ```js
     grunt.loadNpmTasks('grunt-pagespeed');
     ```
+    
+3. Obtain Google API Key from:
+
+   
+   [https://developers.google.com/speed/docs/insights/v1/getting_started#auth](https://developers.google.com/speed/docs/insights/v1/getting_started#auth)
+   
 
 
 ##Pagespeed task
@@ -25,14 +32,15 @@ _This task is a [multi task][] so any targets, files and options should be speci
 
 [multi task]: https://github.com/gruntjs/grunt/wiki/Configuring-tasks
 
+
 ###Usage Example
 
 ```js
 pagespeed: {
     prod: {
-        url: "https://developers.google.com/speed/docs/insights/v1/getting_started"
-        locale: "en_GB"
-        strategy: "desktop"
+        url: "https://developers.google.com/speed/docs/insights/v1/getting_started",
+        locale: "en_GB",
+        strategy: "desktop",
         threshold: 80
     },
     options: {
@@ -47,7 +55,6 @@ Type: `String`
 
 The URL of the page for which the PageSpeed Insights API should generate results.
 
-###Options
 ####locale
 Type: `String`
 
@@ -59,6 +66,13 @@ Type: `String`
 The strategy to use when analyzing the page. Valid values are desktop and mobile.
 
 ####threshold
-Type: `String`
+Type: `Number`
 
 Threshold score that is needed to pass the pagespeed test
+
+###Options
+
+####key
+Type: `String`
+
+[Google API Key](https://code.google.com/apis/console/)
