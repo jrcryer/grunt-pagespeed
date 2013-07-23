@@ -26,14 +26,18 @@ _This task is a [multi task][] so any targets, files and options should be speci
 
 [multi task]: https://github.com/gruntjs/grunt/wiki/Configuring-tasks
 
+####Get an API key
+
+Just go there: https://developers.google.com/speed/docs/insights/v1/getting_started#auth
+
 ###Usage Example
 
 ```js
 pagespeed: {
     prod: {
-        url: "https://developers.google.com/speed/docs/insights/v1/getting_started"
-        locale: "en_GB"
-        strategy: "desktop"
+        url: "https://developers.google.com/speed/docs/insights/v1/getting_started",
+        locale: "en_GB",
+        strategy: "desktop",
         threshold: 80
     },
     options: {
