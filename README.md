@@ -17,6 +17,12 @@ _This plugin is developed for Grunt `0.4.1` and is not tested for backward compa
     ```js
     grunt.loadNpmTasks('grunt-pagespeed');
     ```
+    
+3. Obtain Google API Key from:
+
+   
+   [https://developers.google.com/speed/docs/insights/v1/getting_started#auth](https://developers.google.com/speed/docs/insights/v1/getting_started#auth)
+   
 
 
 ##Pagespeed task
@@ -26,9 +32,6 @@ _This task is a [multi task][] so any targets, files and options should be speci
 
 [multi task]: https://github.com/gruntjs/grunt/wiki/Configuring-tasks
 
-####Get an API key
-
-Just go there: https://developers.google.com/speed/docs/insights/v1/getting_started#auth
 
 ###Usage Example
 
