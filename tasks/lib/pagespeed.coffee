@@ -14,7 +14,7 @@ exports.init = (grunt) ->
 
   exports   = {}
 
-  exports.run = (params, responseHandler) ->
+  exports.run = (params, responseHandler, done) ->
 
     googleapis.discover("pagespeedonline", "v1").execute (err, client) ->
       grunt.fatal(err) if err
@@ -27,6 +27,6 @@ exports.init = (grunt) ->
       request.execute (err, response) ->
         grunt.verbose.writeln 'Pagespeed Insights: Request completed'
         grunt.fatal(err) if err
-        responseHandler(response)
+        responseHandler(response, done)
 
   return exports

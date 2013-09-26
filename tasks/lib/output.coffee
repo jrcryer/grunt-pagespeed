@@ -86,7 +86,7 @@ exports.init = (grunt) ->
   #
   # Processes and outputs results
   #
-  exports.process = (response) ->
+  exports.process = (response, done) ->
     grunt.verbose.writeln 'Pagespeed Insights: Processing results'
 
     score = response.score
@@ -99,5 +99,6 @@ exports.init = (grunt) ->
     divder()
 
     grunt.fatal "Threshold of #{threshold} not met with score of #{response.score}" if response.score < threshold
+    done()
 
   return exports

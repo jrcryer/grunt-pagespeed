@@ -17,9 +17,9 @@ module.exports = (grunt) ->
   grunt.registerMultiTask 'pagespeed', 'Run Pagespeed Insights', ->
 
     grunt.verbose.writeln 'Running Pagespeed Insights'
-    this.async()
+    done = this.async()
 
     params = config.params this.options(this.data)
     output.threshold(config.threshold()) if config.threshold()
 
-    pagespeed.run(params, output.process)
+    pagespeed.run(params, output.process, done)
