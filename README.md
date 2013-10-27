@@ -38,13 +38,24 @@ _This task is a [multi task][] so any targets, files and options should be speci
 ```js
 pagespeed: {
     prod: {
-        url: "https://developers.google.com/speed/docs/insights/v1/getting_started",
-        locale: "en_GB",
-        strategy: "desktop",
-        threshold: 80
+        options: {
+            url: "https://developers.google.com/speed/docs/insights/v1/getting_started",
+            locale: "en_GB",
+            strategy: "desktop",
+            threshold: 80
+        }
+    },
+    paths: {
+        options: {
+            paths: ["/speed/docs/insights/v1/getting_started", "/speed/docs/about"],
+            locale: "en_GB",
+            strategy: "desktop",
+            threshold: 80
+        }
     },
     options: {
-        key: "API_KEY"
+        key: "API_KEY",
+        url: "https://developers.google.com"
     }
 }
 ```
@@ -70,12 +81,22 @@ Type: `Number`
 
 Threshold score that is needed to pass the pagespeed test
 
+####paths
+Type: `Array`
+
+An array of URL paths that are appended to the URL
+
 ###Options
 
 ####key
 Type: `String`
 
 [Google API Key](https://code.google.com/apis/console/)
+
+####url
+Type: `String`
+
+The URL of the page for which the PageSpeed Insights API should generate results.
 
 ###Sample output
 
