@@ -77,6 +77,16 @@ Type: `String`
 
 [Google API Key](https://code.google.com/apis/console/)
 
+###Sample output
+
+The grunt task outputs the results as follows if everything passes:
+
+![Passing task](http://www.jamescryer.com/img/pass.png)
+
+If the task fails to pass the threshold, then it ouputs something similar to the image below:
+
+![Failing task](http://www.jamescryer.com/img/fail.png)
+
 ##License
 
 MIT
