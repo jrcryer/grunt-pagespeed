@@ -21,5 +21,4 @@ module.exports = (grunt) ->
 
     params = config.params this.options(this.data)
     output.threshold(config.threshold()) if config.threshold()
-
     pagespeed.run(params, output.process, done)

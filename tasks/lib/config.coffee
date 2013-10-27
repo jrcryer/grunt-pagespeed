@@ -10,6 +10,7 @@
 
 exports.init = (grunt) ->
 
+  _         = grunt.util._
   exports   = {}
   config    = {}
   DEFAULT_THRESHOLD = 70
@@ -21,6 +22,14 @@ exports.init = (grunt) ->
   url = ->
     config["url"] if config["url"]
 
+  urls = ->
+    return config["urls"] if config["urls"]
+    [] unless config["urls"]
+
+  paths = ->
+    return config["paths"] if config["paths"]
+    [''] unless config["paths"]
+
   locale = ->
     config["locale"] if config["locale"]
 
@@ -30,11 +39,14 @@ exports.init = (grunt) ->
   exports.params = (options) ->
     config = options
 
-    params = {}
-    params["key"] = key() if key()
-    params["url"] = url() if url()
-    params["locale"] = locale() if locale()
-    params["strategy"] = strategy() if strategy()
+    params = for index, path of paths()
+      param = {}
+      param["key"] = key()
+      param["url"] = url() + path
+      param["locale"] = locale()
+      param["strategy"] = strategy()
+      param
+
     params
 
   exports.threshold = ->
