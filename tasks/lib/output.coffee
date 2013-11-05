@@ -29,7 +29,7 @@ exports.init = (grunt) ->
     for title, result of rulesets
       title  = firstToUpperCaseAndAddSpace(title)
       title += bufferSpace(title)
-      print "#{title}| #{result.ruleScore}"
+      print "#{title}| #{result.ruleImpact}"
 
   #
   # Generate statistics output
