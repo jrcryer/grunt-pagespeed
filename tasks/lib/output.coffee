@@ -29,7 +29,8 @@ exports.init = (grunt) ->
     for title, result of rulesets
       title  = firstToUpperCaseAndAddSpace(title)
       title += bufferSpace(title)
-      print "#{title}| #{result.ruleImpact}"
+      ruleImpact  = Math.ceil(result.ruleImpact * 100)/100;
+      print "#{title}| #{ruleImpact}"
 
   #
   # Generate statistics output
