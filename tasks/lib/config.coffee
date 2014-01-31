@@ -10,7 +10,6 @@
 
 exports.init = (grunt) ->
 
-  _         = grunt.util._
   exports   = {}
   config    = {}
   DEFAULT_THRESHOLD = 70
