@@ -21,7 +21,7 @@
     "grunt": "~0.4.1"
   },
   "dependencies": {
-    "googleapis": "~0.2.13-alpha"
+    "googleapis": "~0.6.1"
   },
   "keywords": [
     "gruntplugin",
