@@ -29,7 +29,7 @@ exports.init = (grunt) ->
     for title, result of rulesets
       title  = firstToUpperCaseAndAddSpace(title)
       title += bufferSpace(title)
-      ruleImpact  = Math.ceil(result.ruleImpact * 100)/100;
+      ruleImpact  = Math.ceil(result.ruleImpact * 100) / 100
       print "#{title}| #{ruleImpact}"
 
   #
@@ -73,7 +73,7 @@ exports.init = (grunt) ->
   #
   # Prints a divider
   #
-  divder = (length = 65)->
+  divder = (length = 65) ->
     print ""
     print(Array(length).join "-")
     print ""
