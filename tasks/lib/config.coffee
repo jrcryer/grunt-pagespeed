@@ -30,6 +30,7 @@ exports.init = (grunt) ->
     [''] unless config["paths"]
 
   locale = ->
+    grunt.fatal("Locale key is mandatory") unless config["locale"]
     config["locale"] if config["locale"]
 
   strategy = ->

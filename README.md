@@ -69,7 +69,7 @@ The URL of the page for which the PageSpeed Insights API should generate results
 ####locale
 Type: `String`
 
-The locale that results should be generated in.
+The locale that results should be generated in.  `This is mandatory.`
 
 ####strategy
 Type: `String`
