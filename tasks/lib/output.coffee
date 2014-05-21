@@ -17,8 +17,8 @@ exports.init = (grunt) ->
   #
   # Generate score output
   #
-  generateScore = (response) ->
-    output  = "URL:   #{response.id} \nScore: #{score}"
+  generateScore = (strategy, response) ->
+    output  = "URL:      #{response.id}\nStrategy: #{strategy} \nScore:    #{score}"
     print output
 
   #
@@ -68,7 +68,7 @@ exports.init = (grunt) ->
   # Adds spaces to words
   #
   addSpacesToWords = (msg) ->
-    (msg.replace(/([A-Z]+)/g, " $1").replace(/([A-Z][a-z])/g, " $1"))
+    (msg.replace(/([A-Z]+)/g, " $1").replace(/([A-Z][a-z])/g, "$1"))
 
   #
   # Prints a divider
@@ -87,12 +87,12 @@ exports.init = (grunt) ->
   #
   # Processes and outputs results
   #
-  exports.process = (response, done = (->)) ->
+  exports.process = (parameters, response, done = (->)) ->
     grunt.verbose.writeln 'Pagespeed Insights: Processing results'
 
     score = response.score
     divder()
-    generateScore(response)
+    generateScore(parameters.strategy, response)
     divder()
     generateStatistics(response.pageStats)
     divder()

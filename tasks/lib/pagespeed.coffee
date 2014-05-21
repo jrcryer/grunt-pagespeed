@@ -29,7 +29,7 @@ exports.init = (grunt) ->
           index++
           grunt.verbose.writeln 'Pagespeed Insights: Request completed'
           grunt.fatal(JSON.stringify(err)) if err
-          return responseHandler(response, done) if index == numOfRuns
-          responseHandler(response)
+          return responseHandler(run, response, done) if index == numOfRuns
+          responseHandler(run, response)
 
   return exports

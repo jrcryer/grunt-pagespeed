@@ -24,8 +24,8 @@ module.exports = (grunt) ->
         options:
           paths: ["/speed/docs/insights/about", "/speed/docs/insights/v1/getting_started"]
           locale: "en_GB"
-          strategy: "desktop"
-          threshold: 80
+          strategy: "mobile"
+          threshold: 62
 
   grunt.loadTasks 'tasks'
 
