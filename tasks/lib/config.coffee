@@ -36,6 +36,10 @@ exports.init = (grunt) ->
   strategy = ->
     config["strategy"] if config["strategy"]
 
+  threshold = ->
+    return DEFAULT_THRESHOLD unless config["threshold"]
+    config["threshold"]
+
   exports.params = (options) ->
     config = options
 
@@ -45,12 +49,12 @@ exports.init = (grunt) ->
       param["url"] = url() + path
       param["locale"] = locale()
       param["strategy"] = strategy()
+      param["threshold"] = threshold()
       param
 
     params
 
-  exports.threshold = ->
-    return DEFAULT_THRESHOLD unless config["threshold"]
-    config["threshold"]
+  exports.threshold = threshold
+
 
   return exports

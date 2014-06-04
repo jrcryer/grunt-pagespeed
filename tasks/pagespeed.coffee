@@ -10,15 +10,17 @@
 
 module.exports = (grunt) ->
 
-  config    = require('./lib/config').init grunt
-  pagespeed = require('./lib/pagespeed').init grunt
-  output    = require('./lib/output').init grunt
+  config = require('./lib/config').init grunt
+  psi    = require('psi')
 
   grunt.registerMultiTask 'pagespeed', 'Run Pagespeed Insights', ->
+    done       = this.async()
+    params     = config.params this.options(this.data)
+    numOfTests = params.length
+    index      = 0
 
-    grunt.verbose.writeln 'Running Pagespeed Insights'
-    done = this.async()
-
-    params = config.params this.options(this.data)
-    output.threshold(config.threshold()) if config.threshold()
-    pagespeed.run(params, output.process, done)
+    for index, options of params
+      psi(options, (err, response) ->
+        index++
+        done() if numOfTests == index
+      )
