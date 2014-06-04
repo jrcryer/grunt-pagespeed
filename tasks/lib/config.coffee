@@ -15,8 +15,10 @@ exports.init = (grunt) ->
   DEFAULT_THRESHOLD = 70
 
   key = ->
-    grunt.fatal("API key is mandatory") unless config["key"]
-    config["key"]
+    config["key"] if config["key"]
+
+  nokey = ->
+    config["nokey"] if config["nokey"]
 
   url = ->
     config["url"] if config["url"]
@@ -43,9 +45,13 @@ exports.init = (grunt) ->
   exports.params = (options) ->
     config = options
 
+    unless key() or nokey()
+      grunt.fatal("Please supply a key or use the nokey option")
+
     params = for index, path of paths()
       param = {}
-      param["key"] = key()
+      param["key"] = key() if config["key"]
+      param["nokey"] = nokey() if config["nokey"]
       param["url"] = url() + path
       param["locale"] = locale()
       param["strategy"] = strategy()

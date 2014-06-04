@@ -12,7 +12,7 @@ module.exports = (grunt) ->
   grunt.initConfig
     pagespeed:
       options:
-        key: "API_KEY"
+        nokey: true
         url: "http://developers.google.com"
       single:
         options:
