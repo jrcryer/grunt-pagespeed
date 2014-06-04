@@ -74,7 +74,23 @@ _This task is a [multi task][] so any targets, files and options should be speci
         }
       }
     }
-    
+
+### Options
+
+#### nokey
+Type: `Boolean`
+
+[Google API Key](https://code.google.com/apis/console/)
+
+#### key
+Type: `String`
+
+[Google API Key](https://code.google.com/apis/console/)
+
+#### url
+Type: `String`
+
+The URL of the page for which the PageSpeed Insights API should generate results.
 
 ### Target Properties
 
@@ -102,18 +118,6 @@ Threshold score that is needed to pass the pagespeed test
 Type: `Array`
 
 An array of URL paths that are appended to the URL
-
-### Options
-
-#### key
-Type: `String`
-
-[Google API Key](https://code.google.com/apis/console/)
-
-#### url
-Type: `String`
-
-The URL of the page for which the PageSpeed Insights API should generate results.
 
 ### Sample output
 
