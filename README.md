@@ -80,7 +80,7 @@ _This task is a [multi task][] so any targets, files and options should be speci
 #### nokey
 Type: `Boolean`
 
-[Google API Key](https://code.google.com/apis/console/)
+Use the nokey option to test-drive PageSpeed Insights before acquiring a key for production builds.
 
 #### key
 Type: `String`
