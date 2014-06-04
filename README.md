@@ -10,29 +10,29 @@ _This plugin is developed for Grunt `0.4.1` and is not tested for backward compa
 
 Install this grunt plugin with the following command:
 
-    ```
+
     npm install grunt-pagespeed --save-dev
-    ```
+
 
 ## Loading the plugin
 
 Add this to your project's `Gruntfile.js` gruntfile:
 
-    ```
+
     grunt.loadNpmTasks('grunt-pagespeed');
-    ```
+
 
 Or, add this to your project's `Gruntfile.coffee` gruntfile:
 
-    ```
+
     grunt.loadNpmTasks 'grunt-pagespeed'
-    ```
+
 
 Alternatively use [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) to load your plugins.
 
-    ```
+
     require('load-grunt-tasks')(grunt);
-    ```
+
 
 ## Google API Key
 
@@ -51,7 +51,7 @@ _This task is a [multi task][] so any targets, files and options should be speci
 
 ###Usage Example
 
-    ```
+    ```js
     pagespeed: {
       options: {
         nokey: true,
