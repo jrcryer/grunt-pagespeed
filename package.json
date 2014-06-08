@@ -12,7 +12,7 @@
     "url": "git://github.com/jrcryer/grunt-pagespeed.git"
   },
   "contributors": [],
-  "version": "0.1.3",
+  "version": "0.2.0",
   "main": "Gruntfile.coffee",
   "engines": {
     "node": ">=0.8.0"
