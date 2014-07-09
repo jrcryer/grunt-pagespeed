@@ -21,7 +21,7 @@
     "grunt": "~0.4.1"
   },
   "dependencies": {
-    "psi": "0.0.3"
+    "psi": "^0.1.1"
   },
   "keywords": [
     "gruntplugin",
