@@ -17,10 +17,10 @@ module.exports = (grunt) ->
     done       = this.async()
     params     = config.params this.options(this.data)
     numOfTests = params.length
-    index      = 0
+    current    = 0
 
     for index, options of params
       psi(options, (err, response) ->
-        index++
-        done(err) if numOfTests == index
+        current++
+        done(err) if numOfTests == current
       )
