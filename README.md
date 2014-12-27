@@ -1,4 +1,4 @@
-# grunt-pagespeed [![Build Status](https://travis-ci.org/jrcryer/grunt-pagespeed.svg?branch=master)](https://travis-ci.org/jrcryer/grunt-pagespeed)
+# grunt-pagespeed [![Build Status](https://travis-ci.org/jrcryer/grunt-pagespeed.svg?branch=master)](https://travis-ci.org/jrcryer/grunt-pagespeed) [![devDependency Status](https://david-dm.org/jrcryer/grunt-pagespeed/dev-status.svg)](https://david-dm.org/jrcryer/grunt-pagespeed#info=devDependencies)  [![Dependency Status](https://david-dm.org/jrcryer/grunt-pagespeed.svg)](https://david-dm.org/jrcryer/grunt-pagespeed)
 
 > Grunt plugin for running [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/)
 
