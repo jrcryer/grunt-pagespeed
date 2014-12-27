@@ -1,4 +1,4 @@
-# grunt-pagespeed
+# grunt-pagespeed [![Build Status](https://travis-ci.org/jrcryer/grunt-pagespeed.svg?branch=master)](https://travis-ci.org/jrcryer/grunt-pagespeed)
 
 > Grunt plugin for running [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/)
 
