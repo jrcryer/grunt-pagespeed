@@ -22,5 +22,5 @@ module.exports = (grunt) ->
     for index, options of params
       psi(options, (err, response) ->
         index++
-        done() if numOfTests == index
+        done(err) if numOfTests == index
       )
