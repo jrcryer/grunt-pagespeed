@@ -20,7 +20,7 @@ module.exports = (grunt) ->
     current    = 0
 
     for index, options of params
-      psi(options, (err, response) ->
+      psi.output(options.url, options, (err, response) ->
         current++
         done(err) if numOfTests == current
       )

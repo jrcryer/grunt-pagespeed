@@ -12,7 +12,7 @@
     "url": "git://github.com/jrcryer/grunt-pagespeed.git"
   },
   "contributors": [],
-  "version": "0.4.1",
+  "version": "1.0.0",
   "main": "Gruntfile.coffee",
   "engines": {
     "node": ">=0.8.0"
@@ -21,7 +21,7 @@
     "grunt": "~0.4.1"
   },
   "dependencies": {
-    "psi": "^0.1.1"
+    "psi": "^1.0.6"
   },
   "keywords": [
     "gruntplugin",
