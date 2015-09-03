@@ -22,6 +22,7 @@ module.exports = (grunt) ->
     output = []
 
     for index, options of params
+    	# safe output to file
       if options.file
         psi(options.url, options, (err, data) ->
           current++
@@ -35,6 +36,7 @@ module.exports = (grunt) ->
             grunt.log.ok 'Wrote output to ' + options.filepath + options.file
             done(err)
         )
+      # print output to cli
       else
         psi.output(options.url, options, (err, response) ->
           current++
