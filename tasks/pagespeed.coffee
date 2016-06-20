@@ -24,18 +24,21 @@ module.exports = (grunt) ->
     for index, options of params
       # safe output to file
       if options.file
-        psi(options.url, options, (err, data) ->
+        psi(options.url, options).then (data) ->
           current++
-          unless err
-            grunt.log.write '.'
-            output.push {'url': options.url, 'score': data.score, 'pageStats': data.pageStats }
+          grunt.log.write 'url:' + data.id + ' '
+          grunt.log.ok 'score:' + data.ruleGroups.SPEED.score
+          # full output
+          # output.push {data}
+          output.push {'url': data.id, 'score': data.ruleGroups.SPEED.score, 'pageStats': data.pageStats }
           if numOfTests == current
-            #console.log filepath + filename
             grunt.file.write options.filepath + options.file, JSON.stringify(output, false, 4)
             grunt.log.writeln(' ')
             grunt.log.ok 'Wrote output to ' + options.filepath + options.file
-            done(err)
-        )
+            done()
+        .catch (err) ->
+          current++
+          done(err) if numOfTests == current
       # print output to cli
       else
         psi.output(options.url, options).then (response) ->

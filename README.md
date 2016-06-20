@@ -49,7 +49,7 @@ _This task is a [multi task][] so any targets, files and options should be speci
 [multi task]: https://github.com/gruntjs/grunt/wiki/Configuring-tasks
 
 
-###Usage Example
+### Usage Example
 
 
     pagespeed: {
@@ -76,9 +76,12 @@ _This task is a [multi task][] so any targets, files and options should be speci
       saveOutputToFile: {
         options: {
             paths: ["/speed/docs/insights/v1/getting_started", "/speed/docs/about"],
+            locale: "en_GB",
+            strategy: "desktop",
+            threshold: 80,
             format: "json",
-            file: "pagespeed.json",
-            filepath: "tests/"
+            file: "pagespeed",
+            filepath: "results/"
         }
       }
     }
