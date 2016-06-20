@@ -51,7 +51,7 @@ _This task is a [multi task][] so any targets, files and options should be speci
 
 ### Usage Example
 
-
+```js
     pagespeed: {
       options: {
         nokey: true,
@@ -85,6 +85,7 @@ _This task is a [multi task][] so any targets, files and options should be speci
         }
       }
     }
+```
 
 ### Options
 
