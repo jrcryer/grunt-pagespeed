@@ -24,4 +24,5 @@ module.exports = (grunt) ->
         current++
         done() if numOfTests == current
       .catch (err) ->
+        current++
         done(err) if numOfTests == current
