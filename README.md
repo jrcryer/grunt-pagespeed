@@ -49,9 +49,9 @@ _This task is a [multi task][] so any targets, files and options should be speci
 [multi task]: https://github.com/gruntjs/grunt/wiki/Configuring-tasks
 
 
-###Usage Example
+### Usage Example
 
-
+```js
     pagespeed: {
       options: {
         nokey: true,
@@ -73,7 +73,19 @@ _This task is a [multi task][] so any targets, files and options should be speci
           threshold: 80
         }
       }
+      saveOutputToFile: {
+        options: {
+            paths: ["/speed/docs/insights/v1/getting_started", "/speed/docs/about"],
+            locale: "en_GB",
+            strategy: "desktop",
+            threshold: 80,
+            format: "json",
+            file: "pagespeed",
+            filepath: "results/"
+        }
+      }
     }
+```
 
 ### Options
 
@@ -84,6 +96,17 @@ Use the nokey option to test-drive PageSpeed Insights before acquiring a key for
 
 #### key
 Type: `String`
+
+#### format
+Type: `String`, values(json|cli|tap)
+
+#### file
+Type: `String`, filename for output
+
+If file is set, format is set to json.
+
+#### filepath
+Type: `String` path for output
 
 [Google API Key](https://code.google.com/apis/console/)
 

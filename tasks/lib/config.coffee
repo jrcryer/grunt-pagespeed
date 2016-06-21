@@ -13,9 +13,14 @@ exports.init = (grunt) ->
   exports   = {}
   config    = {}
   DEFAULT_THRESHOLD = 70
+  DEFAULT_FORMAT = 'cli'
 
   key = ->
     config["key"] if config["key"]
+
+  format = ->
+    return config["format"] if config["format"]
+    return DEFAULT_FORMAT unless config["format"]
 
   nokey = ->
     config["nokey"] if config["nokey"]
@@ -38,6 +43,20 @@ exports.init = (grunt) ->
   strategy = ->
     config["strategy"] if config["strategy"]
 
+  timeout = ->
+    config["timeout"] if config["timeout"]
+
+  file = ->
+    config["file"] + ".json" if config["file"]
+
+  filepath = ->
+    config["filepath"] if config["filepath"]
+
+  format = ->
+    return "json" if config["file"]
+    return config["format"] if config["format"] && config['format'].match(/json|cli|tap/)
+    'cli' unless config["format"] && config['format'].match(/json|cli|tap/)
+
   threshold = ->
     return DEFAULT_THRESHOLD unless config["threshold"]
     config["threshold"]
@@ -56,6 +75,9 @@ exports.init = (grunt) ->
       param["locale"] = locale()
       param["strategy"] = strategy()
       param["threshold"] = threshold()
+      param["filepath"] = filepath()
+      param["file"] = file()
+      param["format"] = format() if config["format"]
       param
 
     params
