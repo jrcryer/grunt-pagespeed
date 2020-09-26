@@ -1,6 +1,12 @@
-sudo: false
+os: linux
+
+# [INFO] The latest environment for September 2020:
+# https://docs.travis-ci.com/user/reference/linux#overview
+dist: focal
+
 language: node_js
+
+# [INFO] Use the latest stable Node.js release:
+# https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions
 node_js:
-  - 'stable'
-  - '0.12'
-  - '0.10'
+- node
