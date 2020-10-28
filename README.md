@@ -49,7 +49,7 @@ _This task is a [multi task][] so any targets, files and options should be speci
 [multi task]: https://github.com/gruntjs/grunt/wiki/Configuring-tasks
 
 
-###Usage Example
+### Usage Example
 
 
     pagespeed: {
